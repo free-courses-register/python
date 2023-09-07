@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Signing Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        h1 {
+            color: #e74c3c;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Initially hide the countdown */
+        #countdown {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Error Signing Up</h1>
+    <p>Sorry, there was an error processing your signup request.</p>
+    
+    <!-- Add a button to try again -->
+    <button onclick="startCountdown()">Try Again</button>
+    
+    <!-- Countdown paragraph -->
+    <p id="countdown">Redirecting in 5 seconds...</p>
+
+    <script>
+        var countdownValue = 5; // Initial countdown value
+        
+        function startCountdown() {
+            var countdownElement = document.getElementById("countdown");
+            var buttonElement = document.querySelector("button");
+
+            // Hide the button
+            buttonElement.style.display = "none";
+
+            // Show the countdown
+            countdownElement.style.display = "block";
+
+            var countdownInterval = setInterval(function() {
+                countdownValue--;
+                countdownElement.textContent = "Redirecting in " + countdownValue + " seconds...";
+
+                if (countdownValue === 0) {
+                    clearInterval(countdownInterval); // Stop the countdown
+                    redirectToSignup();
+                }
+            }, 1000); // Update the countdown every 1 second (1000 milliseconds)
+        }
+
+        function redirectToSignup() {
+            // Redirect the user to the signup page
+            window.location.href = 'welcome.html'; // Replace 'welcome.html' with the actual URL of your signup page
+        }
+    </script>
+</body>
+</html>

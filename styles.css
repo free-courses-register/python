@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: rgb(248, 127, 22);
+    margin: 50px auto;
+}
+
+h2 {
+    color: #ffffff;
+}
+
+.birthday-message {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+#cake-image {
+    max-width: 80%;
+    margin-top: 20px;
+}
+
+/* Hide audio controls */
+audio[controls] {
+    display: none;
+}
+
+
+.birthday-message {
+    background-color: #fdb50e; /* Orange background color */
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+    font-size: 18px;
+    color: #fff; /* White text color for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow effect */
+    max-width: 80%; /* Limit the width of the message */
+    line-height: 1.5; /* Improve readability with increased line height */
+    font-family: 'Roboto', sans-serif; /* Specify the Roboto font */
+  }
